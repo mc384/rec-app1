@@ -1,14 +1,8 @@
 import requests
 import pandas as pd
-from dotenv import load_dotenv
-import os
+import streamlit as st
 
-load_dotenv()
-
-# Load the client id
-CLIENT_ID = os.getenv('CLIENT_ID')
-
-def create_dataframe(user):
+def create_dataframe(user, CLIENT_ID):
     urlLeft = 'https://api.myanimelist.net/v2/users/'
     urlRight = '/animelist?fields=list_status&status=completed&limit=999'
 

@@ -2,6 +2,9 @@ import streamlit as st
 from app.get_user import create_dataframe
 from models.sprs_model_prod import pred_shows 
 
+# Get client ID
+CLIENT_ID = st.secrets["CLIENT_ID"]
+
 # Set the title
 st.title('Questionable Suggestions')
 
@@ -22,7 +25,7 @@ with col2:
     # Check that we are getting the dataframe
     if username:
         # Get user list
-        df = create_dataframe(username)
+        df = create_dataframe(username, CLIENT_ID)
         #dummy = df.iloc[0, 1]
         #st.write(str(dummy))
         # Get recommendations
