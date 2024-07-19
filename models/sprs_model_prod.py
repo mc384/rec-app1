@@ -14,9 +14,14 @@ def pred_shows(df):
     #print(df.head(10))
     df_filtered = df[df['rating'] != -1]
     #df_first_100000 = df_filtered.tail(100000)
-    df1 = df_filtered.head(7000000)
-    df1 = df1.sample(n=49000)
-    df2 = df_filtered.tail(1000)
+    #df1 = df_filtered.head(7000000)
+    #df1 = df1.sample(n=49000)
+    #df2 = df_filtered.tail(1000)
+    df2 = df_filtered[df_filtered['id']== 73517]
+    num_user = df2.shape[0]
+    num_left = 1000 - num_user
+    df1 = df_filtered.head(2000)
+    df1 = df1.sample(n=num_left)
     df_first_50000 = pd.concat([df1, df2], axis=0)
 
     reader = Reader(rating_scale=(1, 10))
