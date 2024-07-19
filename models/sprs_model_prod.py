@@ -17,7 +17,7 @@ def pred_shows(df):
     #df1 = df_filtered.head(7000000)
     #df1 = df1.sample(n=49000)
     #df2 = df_filtered.tail(1000)
-    df2 = df_filtered[df_filtered['id']== 73517]
+    df2 = df_filtered[df_filtered['user_id']== 73517]
     num_user = df2.shape[0]
     num_left = 1000 - num_user
     df1 = df_filtered.head(2000)
