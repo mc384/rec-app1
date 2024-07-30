@@ -18,7 +18,7 @@ with col2:
     # Header for recommendations
     st.header('Recommendations')
     # Placeholder for recommendations content
-    st.write('Recommendations will appear here.')
+    st.write('Based on your list, we think you\'d like these shows:')
     # Check that we are getting the dataframe
     if username:
         # Get user list
@@ -26,8 +26,9 @@ with col2:
         #dummy = df.iloc[0, 1]
         #st.write(str(dummy))
         # Get recommendations
-        anime_rec = pred_shows(df)
-        st.write(anime_rec)
+        anime_rec = pred_shows(df) # looks like [0: "Sen to chihiro", 1: "kara no kyoukai", etc]
+        for i in range(10):
+            st.write(anime_rec[i])
 
 # Run the Streamlit app
 # Use the command `streamlit run app.py` in your terminal to start the app
