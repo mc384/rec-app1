@@ -20,7 +20,8 @@ def pred_shows(df):
     df2 = df_filtered[df_filtered['user_id']== 73517]
     num_user = df2.shape[0]
     num_left = 1000 - num_user
-    df1 = df_filtered.head(2000)
+    #df1 = df_filtered.head(2000)
+    df1 = df_filtered
     df1 = df1.sample(n=num_left)
     df_first_50000 = pd.concat([df1, df2], axis=0)
 
