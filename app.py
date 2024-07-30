@@ -21,8 +21,6 @@ with col2:
     # Header for recommendations
     st.subheader('Recommendations')
     st.write('Based on your list, we\'ll look for shows that best fit you.')
-    # Placeholder for recommendations content
-    st.write('Recommendations will appear here.')
     # Check that we are getting the dataframe
     if username:
         # Get user list
