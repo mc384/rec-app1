@@ -13,9 +13,5 @@ rating.csv - Contains user ratings.
 Resources used: <br />
 Anime recommendations database - https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database?select=rating.csv <br />
 
-Additional resources: <br />
-Intro to collaborative filtering - https://realpython.com/build-recommendation-engine-collaborative-filtering/ <br />
-Streamlit - https://docs.streamlit.io/get-started# 
-
 On streamlit <br />
 Requirements can be found in the requirements.txt file. Due to memory restrictions on streamlit cloud, a only a subset of the data is used.
